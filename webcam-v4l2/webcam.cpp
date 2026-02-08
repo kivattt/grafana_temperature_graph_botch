@@ -103,10 +103,10 @@ Webcam::Webcam(const string& device, int width, int height) :
     init_device();
     // xres and yres are set to the actual resolution provided by the cam
 
-    // frame stored as RGB888 (ie, RGB24)
+    // frame stored as RGBA8888 (ie, RGB32)
     rgb_frame.width = xres;
     rgb_frame.height = yres;
-    rgb_frame.size = xres * yres * 3;
+    rgb_frame.size = xres * yres * 4;
     rgb_frame.data = (unsigned char *) malloc(rgb_frame.size * sizeof(char));
 
     start_capturing();

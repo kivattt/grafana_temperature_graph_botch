@@ -13,7 +13,7 @@ struct RGBImage {
       unsigned char   *data; // RGB888 <=> RGB24
       size_t          width;
       size_t          height;
-      size_t          size; // width * height * 3
+      size_t          size; // width * height * 4
 };
 
 
